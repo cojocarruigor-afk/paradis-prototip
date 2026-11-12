@@ -279,7 +279,7 @@ p{margin:0 0 1em}
 /* pagina „Despre noi” */
 .about__role{margin:-6px 0 22px;font-weight:700;color:var(--gold-ink)}
 .about p{max-width:56ch}
-.about__stats{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:30px 0;padding:24px 0;border-block:1px solid var(--line)}
+.about__stats{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:30px 0;padding:24px 0;border-block:1px solid var(--line)}
 .about__stats b{display:block;font:500 clamp(1.8rem,3vw,2.4rem)/1 var(--display);color:var(--gold-ink)}
 .about__stats span{display:block;margin-top:6px;font-size:.88rem;color:var(--muted)}
 
@@ -512,3 +512,4 @@ td:first-child{color:var(--muted);font-weight:700;font-size:.92rem;width:28%}
 .specs-list b{font-weight:500;font-size:.98rem;line-height:1.4}
 @media (max-width:560px){.specs-list{grid-template-columns:1fr}}
 [data-tabs][data-active=all] [data-show=all]{display:block}
+@media (max-width:560px){.about__stats{grid-template-columns:1fr 1fr}}
