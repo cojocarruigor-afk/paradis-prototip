@@ -511,3 +511,4 @@ td:first-child{color:var(--muted);font-weight:700;font-size:.92rem;width:28%}
 .specs-list li{grid-template-columns:22px 1fr;gap:10px}
 .specs-list b{font-weight:500;font-size:.98rem;line-height:1.4}
 @media (max-width:560px){.specs-list{grid-template-columns:1fr}}
+[data-tabs][data-active=all] [data-show=all]{display:block}

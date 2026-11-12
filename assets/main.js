@@ -116,7 +116,7 @@ $$('.calc').forEach(c => {
     o('per').textContent = `${fmt(price)} ${c.dataset.cur}`;
     o('total').textContent = `${fmt(total)} ${c.dataset.cur}`;
     const pkg = $('.seg button[aria-pressed=true] b', c).textContent;
-    o('cta').href = wa(c.dataset.wa, fill(c.dataset.msg, { ev: sel.selectedOptions[0].text, guests: n, kids: kids ? fill(c.dataset.kidsMsg, { n: kids }) : '', pkg, hall, total: fmt(total) }));
+    o('cta').href = wa(c.dataset.wa, fill(c.dataset.msg, { guests: n, kids: kids ? fill(c.dataset.kidsMsg, { n: kids }) : '', pkg, hall, total: fmt(total) }));
     if (fig) plan(fig, people, hall);
   };
   range.addEventListener('input', render);
@@ -126,7 +126,7 @@ $$('.calc').forEach(c => {
     price = +b.dataset.price; render();
   }));
   // tipul evenimentului: alte prețuri pe cele 3 pachete; fila de meniu din aceeași secțiune îl urmează
-  sel.addEventListener('change', () => {
+  if (sel) sel.addEventListener('change', () => {
     const opt = sel.selectedOptions[0], ps = opt.dataset.prices.split(' ');
     btns.forEach((b, i) => { b.dataset.price = ps[i]; $('span', b).textContent = `${fmt(+ps[i])} ${c.dataset.per}`; });
     price = +$('.seg button[aria-pressed=true]', c).dataset.price;
